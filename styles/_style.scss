@@ -1,0 +1,242 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 10px;
+    color:$color-blue;
+}
+
+h1 {
+    font-size: 3.5em;
+}
+
+h1, h2, h3, h4, h5, h6, nav, footer {
+    text-transform: uppercase;
+    font-family: bebas-neue, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+button {
+    color:white;
+
+    &:hover {
+        color:white !important;
+        cursor: pointer;
+    }
+}
+
+article {
+    font-size: 1.5em;
+    text-align: justify;
+}
+
+/**
+ *
+ * Header
+ *
+ */
+
+#header {
+    position: absolute;
+    width: 100%;
+    top:0px;
+    height: 100%;
+
+    header {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+
+        video {
+            position:fixed;
+            max-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+
+            // object-fit: fill;
+            // o-object-fit: fill;
+        }
+    }
+}
+
+/**
+ *
+ * Navigations
+ *
+ */
+
+
+#navigation {
+    position: absolute;
+    bottom:0em;
+    width: 100%;
+    height: 5em;
+    background-color: $background;
+    text-align: center;
+    padding: 1em;
+    z-index: 100;
+
+    a {
+        font-size: 2.3em;
+        color:$nav;
+        padding:0px 5em;
+        text-decoration: none;
+
+        &:hover, &.active {
+            color:$nav-hover;
+        }
+    }
+
+    &.fixed {
+        position : fixed;
+        top:0px;
+    }
+}
+
+/**
+ *
+ * About
+ *
+ */
+
+#about {
+    position: relative;
+    top:100%;
+    width: 100%;
+    height:auto;
+    background-color: $background-highlight;
+    color: $color-white;
+    overflow: hidden;
+
+    h1 {
+        color: $title-white;
+        padding-bottom:.5em;
+    }
+
+    .logo {
+
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center left;
+        width: 100px;
+        height: 300px;
+        position: absolute;
+        top: -5em;
+
+        &.top {
+            background-image : url('../images/logo-top.svg');
+            right: -3em;
+            background-color: $background-highlight;
+        }
+
+        &.ticket {
+            background-image : url('../images/logo-ticket.svg');
+            right: -43.3em;
+            width: 300px;
+            @include slide(all 1.4s ease);
+
+            &.slide {
+                right:7.2em;
+            }
+        }
+
+        &.bottom {
+            background-image : url('../images/logo-bottom.svg');
+            right:2.9em;
+        }
+
+    }
+}
+
+/**
+ *
+ * Games
+ *
+ */
+
+#games {
+    position: relative;
+    top:100%;
+    background-color: $background;
+    width: 100%;
+    height: auto;
+
+    h1 {
+        color: $title-blue;
+    }
+
+    .game-pic {
+        width: 100%;
+        position:relative;
+        height: 300px;
+        margin: 0 auto;
+        // margin-top:50%;
+        // top:-150px;
+        background-repeat : no-repeat;
+        background-position : center;
+        background-size: contain;
+
+        &.duck {
+            background-image: url('../images/duck.png');
+        }
+
+        &.car {
+            background-image: url('../images/car.png');
+        }
+
+        &.fly {
+            background-image: url('../images/fly.png');
+        }
+
+         &.shoot {
+            background-image: url('../images/shoot.png');
+        }
+
+        &.basket {
+            background-image: url('../images/basket.png');
+        }
+    }
+}
+
+
+
+/**
+ *
+ * Technology
+ *
+ */
+
+
+#technology {
+    position: relative;
+    width: 100%;
+    top:100%;
+    height:auto;
+    background-color: $background-footer;
+    color: $color-white;
+
+    h1 {
+        color: $title-white;
+        padding-bottom:.5em;
+    }
+
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    top:100%;
+    height:auto;
+    background-color: $background;
+    color: $color-blue;
+    font-size: 1.4em;
+    text-align: center;
+    padding:.4em;
+}
