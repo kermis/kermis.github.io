@@ -102,7 +102,7 @@ article {
     background-color: $background-highlight;
     color: $color-white;
     overflow: hidden;
-
+    z-index: 95;
     h1 {
         color: $title-white;
         padding-bottom:.5em;
@@ -127,6 +127,7 @@ article {
     background-color: $background;
     width: 100%;
     height: auto;
+    z-index: 96;
 
     h1 {
         color: $title-blue;
@@ -237,6 +238,18 @@ article {
     }
 }
 
+#highscores {
+    position: relative;
+    bottom: 0;
+    z-index: 97;
+    background: $color-blue;
+    color: $title-white;
+    .scores{
+        font-weight: 200;
+        font-size: 1.3em;
+    }
+}
+
 footer {
     position: relative;
     width: 100%;
@@ -248,3 +261,6 @@ footer {
     text-align: center;
     padding:.4em;
 }
+
+
+
