@@ -39,9 +39,9 @@
         <![endif]-->
 
             <nav id="navigation">
-                    <a href="#about">About kerm.is</a>
-                    <a href="#games">Play the games</a>
-                    <a href="#technology">Technologies</a>
+                    <a href="#about">About <span class="n-sm">kerm.is</span></a>
+                    <a href="#games">Play <span class="n-sm">the games</span></a>
+                    <a href="#technology">Tech<span class="n-sm">nologies</span></a>
             </nav>
 
             <!-- <div id="header">
@@ -57,7 +57,7 @@
                 </div>
             </div> -->
 
-            <div class="covervid-wrapper">
+            <!-- <div class="covervid-wrapper">
                 <video class="covervid-video" poster="images/header.jpg">
                     <source src="videos/header.webm" type="video/webm">
                     <source src="videos/header.mp4" type="video/mp4">
@@ -65,7 +65,7 @@
                  <div class="video_play">
                     <span class="glyphicon glyphicon-play"></span>
                 </div>
-            </div>
+            </div> -->
 
             <section id="about" class="container-fluid space">
                 <div class="row">
@@ -311,68 +311,68 @@
 
         <script>
 
-            var prevScroll = 0;
+            // var prevScroll = 0;
 
-            $(window).scroll(scrollHandler);
+            // $(window).scroll(scrollHandler);
 
-            function scrollHandler(e) {
-                var scrollPos = $(window).scrollTop();
+            // function scrollHandler(e) {
+            //     var scrollPos = $(window).scrollTop();
 
-                // if(prevScroll < scrollPos)
-                // {
-                //     prevScroll = $(window).scrollTop();
-                // }
-                // else {
+            //     // if(prevScroll < scrollPos)
+            //     // {
+            //     //     prevScroll = $(window).scrollTop();
+            //     // }
+            //     // else {
 
-                //     prevScroll = $(window).scrollTop();
+            //     //     prevScroll = $(window).scrollTop();
 
-                //     if(prevScroll < $("#about").offset().top)
-                //     {
+            //     //     if(prevScroll < $("#about").offset().top)
+            //     //     {
 
-                //         $("#navigation").removeClass('fixed');
-                //     }
-                // }
-
-
-
-                if($("#navigation").offset().top <= scrollPos)
-                {
-                        $("#navigation").addClass('fixed');
-                }
-
-                if($("#about").offset().top - 300 <= scrollPos)
-                {
-                    $('.ticket').addClass('slide');
-                }
-
-                if($("#games").offset().top <= scrollPos || scrollPos <= 50)
-                {
-                    $('.ticket').removeClass('slide');
-                }
-
-            }
+            //     //         $("#navigation").removeClass('fixed');
+            //     //     }
+            //     // }
 
 
-            $('nav a').on('click', function(e) {
-                e.preventDefault();
-                var id = $(this).attr('href');
 
-                $('html, body').animate({
-                    scrollTop: $(id).offset().top
-                }, 1000);
+            //     if($("#navigation").offset().top <= scrollPos)
+            //     {
+            //             $("#navigation").addClass('fixed');
+            //     }
 
-                console.log($(id).offset().top);
-            })
+            //     if($("#about").offset().top - 300 <= scrollPos)
+            //     {
+            //         $('.ticket').addClass('slide');
+            //     }
 
-             var navTop = $('#navigation').offset().top;
+            //     if($("#games").offset().top <= scrollPos || scrollPos <= 50)
+            //     {
+            //         $('.ticket').removeClass('slide');
+            //     }
 
-                    $(window).scroll(function(){
-                            if( $(window).scrollTop() > navTop ) {
-                                    $('#navigation').addClass('fixed');
-                            } else {
-                                    $('#navigation').removeClass('fixed');
-                            }
-                    });
+            // }
+
+
+            // $('nav a').on('click', function(e) {
+            //     e.preventDefault();
+            //     var id = $(this).attr('href');
+
+            //     $('html, body').animate({
+            //         scrollTop: $(id).offset().top
+            //     }, 1000);
+
+            //     console.log($(id).offset().top);
+            // })
+
+            //  var navTop = $('#navigation').offset().top;
+
+            //         $(window).scroll(function(){
+            //                 if( $(window).scrollTop() > navTop ) {
+            //                         $('#navigation').addClass('fixed');
+            //                 } else {
+            //                         $('#navigation').removeClass('fixed');
+            //                 }
+            //         });
         </script>
 
 </body>

@@ -5343,7 +5343,7 @@ article {
  *
  */
 #navigation {
-  position: absolute;
+  /*position: absolute;*/
   top: 0px;
   width: 100%;
   height: 5em;
@@ -5365,7 +5365,7 @@ article {
     transition: all 0.5s ease; }
     #navigation a:hover, #navigation a.active {
       color: #094a69; }
-  #navigation.fixed {
+  #navigation{
     position: fixed;
     top: 0px;
     border-bottom: 1px #e6414b solid; }
@@ -5413,6 +5413,9 @@ article {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain; }
+    #games .game-pic.photo{
+      height: 0px ;
+    }
     #games .game-pic.duck {
       background-image: url("../images/duck.png"); }
     #games .game-pic.car {
@@ -5464,9 +5467,13 @@ article {
     #technology .tech.physi {
       background-image: url("../images/physi.svg"); }
 
+.n-sm{
+  display: none;
+}
 #highscores {
   position: relative;
-  bottom: 0;
+  /*bottom: 0;*/
+  top: 8em;
   z-index: 97;
   background: #094a69;
   color: white; }
@@ -5541,11 +5548,13 @@ footer {
       margin-top: -5rem; }
 
   #about, #games, #technology, #highscores, footer {
-    top: 100%; }
+    /*top: 100%; */
+  }
 
   #navigation {
-    bottom: 0em !important;
-    top: auto;
+    /*bottom: 0em !important;*/
+    top: 0;
+    position: fixed;
     z-index: 1000; }
     #navigation a {
       font-size: 2.3em;
@@ -5582,6 +5591,9 @@ footer {
   .right {
     float: right; } }
 @media (min-width: 768px) {
+  .n-sm{
+    display: inherit;
+  }
   .title {
     text-align: left !important; }
 
